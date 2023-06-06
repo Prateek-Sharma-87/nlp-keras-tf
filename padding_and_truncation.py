@@ -47,3 +47,13 @@ print(padded)
 #  [ 6  3  2  4  0  0  0]
 #  [ 8  6  9  2  4 10 11]]
 
+#### To have padded sentences of lengths different from the longest sentence ####
+padded = pad_sequences(sequences, padding='post', maxlen=5)
+
+#### If sentences are longer than specified max length, you can specify how to truncate ####
+
+# To truncate at the beginning
+padded = pad_sequences(sequences, padding='post', truncating='pre' maxlen=5)
+
+# To truncate at the end
+padded = pad_sequences(sequences, padding='post', truncating='post' maxlen=5)
